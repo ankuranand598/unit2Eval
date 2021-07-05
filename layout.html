@@ -8,9 +8,227 @@
                 border: 1px solid black;
                 width: 80%;
             }
+            #parentDiv{
+                display: flex;
+                flex-direction: row;
+            }
+            .class1,.class2,.class3{
+                width: 30%;
+                height: 100px;
+                margin: 20px;
+                border-radius: 10px;
+            }
+            .class1{
+                background-color: yellow;
+            }
+            .class2{
+                background-color: blue;
+            }
+            .class3{
+                background-color:rgb(43, 165, 213);
+            }
+            #image{
+                background-color: white;
+                height: 50px;
+                width: 20%;
+                border-radius: 50%;
+                justify-content: center;
+                margin-top: 20px;
+                margin-left: 20px;
+                float: left;
+            }
+            #image > div{
+                float: left;
+                margin: 80px;
+                
+               
+            }
+            .para1{
+                color: white;
+                font-size: large;
+                padding-top: 30px;
+               margin: 1px;
+               
+            }
+            .para2{
+                 color: white;
+                font-size: small;
+                  margin: 1px;
+            }
+            .program{
+                clear: both;
+                color:rgb(43, 165, 213);
+                text-align: center;
+            }
+            #graduate{
+                display: grid;
+                grid-gap: 1px;
+                margin-left: 30%;
+              
+                grid-template-columns: 100px 100px 150px 100px;
+                grid-template-rows: 20px;
+                grid-template-areas: "a b c d";
+            }
+            .gridClass1{
+                grid-area: a;
+                background-color: skyblue;
+                color: white;
+                text-align: center;
+                font-size: small;
+                 border-radius: 2px;
+            }
+             .gridClass2{
+                grid-area: b;
+                 font-size: small;
+                  background-color: gainsboro;
+                   text-align: center;
+                    border-radius: 2px;
+            }
+             .gridClass3{
+                grid-area: c;
+                 font-size: small;
+                  background-color: gainsboro;
+                   text-align: center;
+                    border-radius: 2px;
+            }
+             .gridClass4{
+                grid-area: d;
+                 font-size: small;
+                  background-color: gainsboro;
+                   text-align: center;
+                    border-radius: 2px;
+            }
+            #studyProgram{
+                display: grid;
+                margin-top: 50px;
+                width: 100%;
+                grid-gap: 15px;
+                margin-left: 2%;
+                grid-template-columns: 31% 31% 31%;
+                grid-template-rows: 450px;
+            }
+            div > .progImage{
+                height: 200px;
+                width: 100%;
+            }
+            button{
+                border: 1px solid rgb(43, 165, 213);
+                height: 30px;
+                width: 100px;
+                color:rgb(43, 165, 213);
+            }
+            h3 + p{
+                color: rgb(145, 159, 172);
+            }
+            .chem{
+                background-color: rgb(219, 210, 210,0.3);
+                
+            }
+                 @media (max-width:1000px){
+                       #graduate{
+                display: grid;
+                grid-gap: 5px;
+                margin-left: 30%;
+              
+                grid-template-columns: 100px 100px;
+                grid-template-rows: 20px;
+                grid-template-areas: "a b"
+                                     "c d";
+                                    
+            }
+          #studyProgram{
+                display: grid;
+                margin-top: 10px;
+                width: 100%;
+                grid-gap: 15px;
+                margin-left: 5%;
+                grid-template-columns: 40% 40%;
+                grid-template-rows: 450px;
+            }
+            .program{
+                margin-left: 10px;
+            }
+            }
+            @media (max-width:600px){
+              #graduate{
+                display: grid;
+                grid-gap: 5px;
+                margin-left: 50%;
+              
+                grid-template-columns: 100px;
+                grid-template-rows: 20px;
+                grid-template-areas: "a"
+                                     "b"
+                                     "c"
+                                     "d";
+            }
+             #studyProgram{
+                display: grid;
+                margin-top: 10px;
+                width: 100%;
+                grid-gap: 15px;
+                margin-left: 5%;
+                grid-template-columns: 80%;
+                grid-template-rows: 450px;
+            }
+        }
+         
         </style>
     </head>
-    <body>
-
+    <body id="parent">
+           <div id="parentDiv">
+               <div class="class1">
+                   <img id="image" src="https://placeholder.com"/>
+                   <div>
+                       <p class="para1">Scholarship</p>
+                       <p class="para2">Available</p>
+                   </div>
+               </div>
+               <div class="class2">
+                    <img id="image" src="https://placeholder.com" />
+                    <div>
+                        <p class="para1">Scholarship</p>
+                        <p class="para2">Available</p>
+                    </div>
+               </div>
+               <div class="class3">
+                    <img id="image" src="https://placeholder.com" />
+                    <div>
+                        <p class="para1">Scholarship</p>
+                        <p class="para2">Available</p>
+                    </div>
+               </div>
+           </div>          
+                <h1 class="program">Popular Programs</h1>
+                <div id="graduate">
+                <div class="gridClass1">Graduate</div>
+                <div class="gridClass2">PostGraduate</div>
+                <div class="gridClass3">PHD Scholarships</div>
+                <div class="gridClass4">Training</div>
+                </div>
+                <div id="studyProgram">
+                    <div class="chem">
+                    <img class="progImage" src="https://placeholder.com"/>
+                    <p>Agriculture</p>
+                    <h3>Chemical Engineering</h3>
+                    <p>Lorem ipsum dolar sit</br>amet consectetur adipiscing elit, sed</br>do elusmod tempor incididunt ut</p>
+                    <button>APPLY NOW</button>
+                    </div>
+                    <div class="chem">
+                    <img class="progImage" src="https://placeholder.com" />
+                    <p>Agriculture</p>
+                    <h3>Mechanical Engineering</h3>
+                    <p>Lorem ipsum dolar sit</br>amet consectetur adipiscing elit, sed</br>do elusmod tempor incididunt ut</p>
+                    <button>APPLY NOW</button>
+                    </div>
+                    <div class="chem">
+                        <img class="progImage" src="https://placeholder.com" />
+                        <p>Agriculture</p>
+                        <h3>Bio Engineering</h3>
+                        <p>Lorem ipsum dolar sit</br>amet consectetur adipiscing elit, sed</br>do elusmod tempor incididunt ut</p>
+                        <button>APPLY NOW</button>
+                    </div>
+                </div>
+            
     </body>
 </html>
